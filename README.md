@@ -11,3 +11,11 @@ Interpreted languages, on the other hand, will be translated line by line at the
 Java works through its own virtual machine, the JVM. Java being a high level language needs a process to be compiled into machine language.
 Due to the differences between the machine languages of the operating systems, and the slowness of the interpretation, Java has a system to be in every operating system and with a faster process. The solution to this is to use both execution forms.
 As a first step, compile the code to the JVM, and as a second step when executing, interpret this program to the language of the machine that is used.
+
+## Pseudocode currency converter
+  1. START
+  2. dollars <-- GET
+  3. bitcoin <-- 0.000022
+  4. total <-- dollars * bitcoin
+  5. PRINT total
+  6. END
