@@ -22,8 +22,8 @@ As a first step, compile the code to the JVM, and as a second step when executin
 
 # Wednesday, April 6th 
 ## Your date of birth in the matrix?
-Year: 2002 <br>
-2002 --> 1024 + 512 + 255 + 128 + 64 + 16 + 2 <br>
+Year: 2002 <br><br>
+2002 --> 1024 + 512 + 255 + 128 + 64 + 16 + 2 <br><br>
 2002 - 2^10 = 2002 - 1024 = 978 <br>
 978 - 2^9 = 978 - 512 = 466 <br>
 466 - 2^8 = 466 - 255 = 210 <br>
