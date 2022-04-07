@@ -37,3 +37,13 @@ Year: 2002 <br><br>
 | 1 | 1 | 1 | 1 | 1 | 0 | 1| 0 | 0 | 1 | 0 |
 <br>
 2002 --> 11111010010
+
+## MIPS
+Create a program that displays yout name:
+      .data
+          myName: .asciiz "\nYania Dávid\n"
+      .text
+          main:
+                l1 $v0, 4
+                la $a0, myName
+                syscall
