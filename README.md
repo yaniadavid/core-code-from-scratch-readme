@@ -39,11 +39,11 @@ Year: 2002 <br><br>
 2002 --> 11111010010
 
 ## MIPS
-Create a program that displays yout name:
-      .data
-          myName: .asciiz "\nYania Dávid\n"
-      .text
-          main:
-                l1 $v0, 4
-                la $a0, myName
-                syscall
+Create a program that displays yout name: <br>
+      .data <br>
+          myName: .asciiz "\nYania Dávid\n"  <br>
+      .text  <br>
+          main:  <br>
+                l1 $v0, 4 <br>
+                la $a0, myName <br>
+                syscall <br>
