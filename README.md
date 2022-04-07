@@ -1,7 +1,7 @@
 # core-code-from-scratch-readme
 Repository for Bootcamp "Core Code from scratch"
 
-# Tuesday, April 4th
+# Tuesday, April 5th
 ## Interpreted And Compiled Programming Languages
 For the various programming languages, there are two ways to run them. These are: Compiled and Interpreted (and some languages use both).
 Compiled languages are those where the complete code is taken and converted into machine language as a whole, this translation remains permanent and if changes were made to the original code it must be compiled again.
@@ -19,3 +19,21 @@ As a first step, compile the code to the JVM, and as a second step when executin
   4. total <-- dollars * bitcoin
   5. PRINT total
   6. END
+
+# Wednesday, April 6th 
+## Your date of birth in the matrix?
+Year: 2002
+2002 --> 1024 + 512 + 255 + 128 + 64 + 16 + 2
+2002 - 2^10 = 2002 - 1024 = 978
+978 - 2^9 = 978 - 512 = 466
+466 - 2^8 = 466 - 255 = 210
+210 - 2^7 = 210 - 128 = 82
+82 - 2^6 = 82 - 64 = 18
+18 - 2^4 = 18 - 16 = 2
+2 - 2^1 = 2 - 2 = 0
+
+| 2^10  | 2^9  | 2^8  | 2^7  | 2^6  | 2^5  | 2^4  | 2^3  | 2^2  | 2^1  | 2^0 |
+| :------------: | :------------: | :------------: | :------------: | :------------: | :------------: | :------------: | :------------: | :------------: | :------------: | :------------: |
+| 1 | 1 | 1 | 1 | 1 | 0 | 1| 0 | 0 | 1 | 0 |
+
+2002 --> 11111010010
