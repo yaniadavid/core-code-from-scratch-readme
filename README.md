@@ -100,4 +100,26 @@ for(let i = 0; i < 101; i++){
 }
 ```
 
+## Bad Code
+Original Code --> 
+```javascript
+var cond = false;
+
+if ((cond = true)) {
+  console.log('The cond variable is true');
+} else {
+  console.log('The cond variable is false');
+}
+```
+
+Solution -->
+```javascript
+var cond = false;
+
+if ((cond == true)) {
+  console.log('The cond variable is true');
+} else {
+  console.log('The cond variable is false');
+}
+```
 
