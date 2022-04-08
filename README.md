@@ -88,4 +88,16 @@ Create a program that adds any two given numbers provided by the user: <br>
 
 
 
+# Thursday, April 7th
+## Print special numbers
+```javascript
+console.log('Even Numbers from 0 to 100');
+console.log('With For -->');
+var num = 0;
+for(let i = 0; i < 101; i++){
+    if(num % 2 == 0) console.log(num);
+    num+=1;
+}
+```
+
 
