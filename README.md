@@ -123,3 +123,36 @@ if ((cond == true)) {
 }
 ```
 
+## Bad Code 2
+Original Code --> 
+```javascript
+var n = 100;
+
+if (n == 100) {
+  console.log('This is a special number!');
+}
+if (n < 1000) {
+  console.log('');
+} else {
+  console.log('Just a regular number');
+}
+if (n % 10 == 0) {
+  console.log('This number is multiple of 10');
+}
+```
+
+Solution -->
+```javascript
+if(n % 10 == 0){
+    if(n<1000){
+        if(n==100){
+            console.log('This is a special number!');
+        }else{
+            console.log('This number is almost special');
+        }
+    }
+}else{
+    console.log('Just a regular number');
+}
+```
+
