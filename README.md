@@ -156,3 +156,17 @@ if(n % 10 == 0){
 }
 ```
 
+# Tuesday, April 19th
+## Multiply exercise
+```javascript
+function multiply(a, b) {
+  a * b;
+}
+```
+
+```javascript
+function multiply(a, b) {
+  return a * b;
+}
+```
+
