@@ -180,4 +180,9 @@ function uniTotal (string) {
   return sum;
 }
 ```
-
+## Char from ASCII value
+```javascript
+function getChar(c){
+  return String.fromCharCode(c)
+}
+```
