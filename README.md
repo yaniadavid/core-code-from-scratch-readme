@@ -186,3 +186,9 @@ function getChar(c){
   return String.fromCharCode(c)
 }
 ```
+## Binary Addition
+```javascript
+function addBinary(a,b) {
+  return (a+b).toString(2)
+}
+```
