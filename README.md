@@ -192,3 +192,228 @@ function addBinary(a,b) {
   return (a+b).toString(2)
 }
 ```
+## Student's Final Grade
+```javascript
+function finalGrade (exam, projects) {
+  if(exam > 90 || projects > 10){
+    return 100
+  }
+  if(exam > 75 && projects >= 5){
+    return  90
+  } 
+  if(exam > 50 && projects >= 2){
+    return 75
+  }
+  return 0
+}
+```
+
+# Wednesday, April 20
+## Holiday VII - Duty Free
+```javascript
+function dutyFree(normPrice, discount, hol){
+  let duty = normPrice * (discount/100)
+  let quantity = hol / duty
+  return Math.floor(quantity)
+}
+```
+
+## Twice as Old
+```javascript
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  return Math.abs(dadYearsOld - (sonYearsOld * 2))
+}
+```
+
+## Valid Space
+```javascript
+function validSpacing(s) {
+  if(s[0] === " " || s[s.length - 1] === " "){
+    return false
+  }
+  
+  for(let i = 0; i < s.length; i++){
+    if(s[i] === ' '){
+      if(i != 0 && s[i-1] === ' ') {
+        return false;
+      }
+      if(i != (s.length - 1) && s[i+1] === ' ') {
+        return false;
+      }
+    }
+  }
+  
+  return true
+}
+```
+## Fake Binary
+```javascript
+function fakeBin(x){
+  let result = ''
+  for(let i = 0; i < x.length; i++){
+    if(x[i] < 5){
+      result += '0';
+    }else{
+      result += '1';
+    }
+  }
+  return result;
+}
+```
+
+# Thursday, April 21
+## Remove All Exclamation Marks From The End of Sentence
+```javascript
+function remove (string) {  
+  let end = string.length - 1;
+  for(let i = string.length - 1; i > 0; i--){
+    if(string[i] !== '!'){
+      return string.substring(0, i + 1)
+    }
+  }
+}
+```
+
+## Vowel Remover
+```javascript
+function shortcut (string) {
+  let result = '';
+  for(let i = 0; i < string.length; i++){
+    if(string[i] !== 'a' && string[i] !== 'e' && string[i] !== 'i' && string[i] !== 'o' && string[i] !== 'u'){
+      result += string[i]
+    }
+  }
+  return result;
+}
+```
+## Rock Paper Scissors
+```javascript
+const rps = (p1, p2) => {
+  if(p1 == p2){
+    return 'Draw!'
+  }else if(p1 == 'rock' && p2 == 'scissors' || p1 == 'scissors' && p2 == 'paper' || p1 == 'paper' && p2 == 'rock'){
+    return 'Player 1 won!'
+  }else{
+    return 'Player 2 won!'
+  }
+};
+
+```
+
+# Monday, April 25
+## Who Likes it?
+```javascript
+function likes(names) {
+  if(names.length == 0){return 'no one likes this'}
+  if(names.length == 1){return names[0] + ' likes this'}
+  if(names.length == 2){return names[0] + ' and ' + names[1] +' like this'}
+  if(names.length == 3){return names[0] + ', ' + names[1] + ' and ' + names[2] + ' like this'}
+  if(names.length >= 4){let quantity = names.length - 2;
+    return names[0] + ', ' + names[1] + ' and ' + quantity + ' others like this'}
+}
+```
+
+## Big Counting
+```javascript
+var countBits = function(n) {
+  let bin = n.toString(2);
+  let count = 0;
+  for(let i = 0; i < bin.length; i++){
+    if(bin[i] == 1){
+      count += 1;
+    }
+  }
+  return count;
+};
+```
+
+## You Order, Please
+```javascript
+function order(words){
+  let array_words = words.split(" ");
+  let good_words = []
+  let array_numbers = []
+  for(let i = 0; i < array_words.length; i++){
+    for(let j = 0; j < array_words[i].length; j++){
+      if((array_words[i][j] == 1 || array_words[i][j] == 2 || array_words[i][j] == 3
+      || array_words[i][j] == 4 || array_words[i][j] == 5 || array_words[i][j] == 6
+      || array_words[i][j] == 7 || array_words[i][j] == 8 || array_words[i][j] == 9 )){
+        good_words[array_words[i][j]] = array_words[i];
+      }
+    }
+  }
+
+  let result = good_words.join(' ')
+  if(result[0] == ' '){
+    result = result.slice(1, result.length )
+  }
+  return result;
+}
+
+```
+
+# Tuesday, April 26
+## Pig Latin
+```javascript
+function pigIt(str){
+  let array_words = str.split(" ");
+  let pig_words = []
+  let temp;
+  let pMarks = ['!', '¡', '?', '¿', '.', ',', ':', ';'];
+  for(let i = 0; i < array_words.length; i++){
+    if (pMarks.indexOf(array_words[i]) >= 0) {pig_words[i] = array_words[i]; continue;}
+    temp = '';
+    for(let j = 1; j < array_words[i].length; j++){
+       temp += array_words[i][j];
+    }
+    temp += array_words[i][0];
+    temp += 'ay'
+    pig_words[i] = temp;
+  }
+  return pig_words.join(' ')
+}
+```
+
+# Wednesday, April 27
+## Valid Parentheses
+```javascript
+function validParentheses(parens) {
+  let count = 0;
+  for(let i = 0; i < parens.length; i++){
+    if(parens[i] == '(') count++;
+    if(parens[i] == ')') count--;
+    if(count < 0) return false;
+  }
+  return count === 0;
+}
+```
+
+## Convert String to camel case
+```javascript
+function toCamelCase(str){
+  let result = '';
+  for(let i = 0; i < str.length; i++){
+    if(i != 0 && str[i - 1] === '_' || str[i - 1] === '-'){
+      result += str[i].toUpperCase();
+    }else if(str[i] != '_' && str[i] != '-'){
+      result += str[i];
+    }
+  }
+  return result;
+}
+```
+
+## Unique in Order
+```javascript
+function toCamelCase(str){
+  let result = '';
+  for(let i = 0; i < str.length; i++){
+    if(i != 0 && str[i - 1] === '_' || str[i - 1] === '-'){
+      result += str[i].toUpperCase();
+    }else if(str[i] != '_' && str[i] != '-'){
+      result += str[i];
+    }
+  }
+  return result;
+}
+```
