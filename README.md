@@ -313,7 +313,7 @@ function likes(names) {
 }
 ```
 
-## Big Counting
+## Bit Counting
 ```javascript
 var countBits = function(n) {
   let bin = n.toString(2);
