@@ -444,3 +444,15 @@ function validateUsr(username) {
   return res
 }
 ```
+
+## Get Number from String
+Write a function which removes from string all non-digit characters and parse the remaining to number.
+```javascript
+function getNumberFromString(s) {
+  
+  const regexp = /\D/g; //--> \D todo excepto dígitos
+  let numbers = s.replace(regexp, '') // --> reemplaza lo encontrado con el regex a ''
+                                      
+  return Number(numbers); // --> retorna en número                                 
+}
+```
