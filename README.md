@@ -417,3 +417,30 @@ function toCamelCase(str){
   return result;
 }
 ```
+
+
+# Wednesday, May 4th
+## Simple Validation Of A Username
+Write a simple regex to validate a username. Allowed characters are: <br>
+lowercase letters, <br>
+numbers, <br>
+underscore. <br>
+Length should be between 4 and 16 characters (both included).
+```javascript
+
+function validateUsr(username) {
+  res = /^([a-z]+|\d+|_){4,16}$/.test(username)
+ 
+    //Regex between slashes --> / /
+    //Start --> ^
+    //End --> $
+    //Length between 4 and 16 characters --> {4,16}
+    //Lowercase --> [a-z]
+    //Numbers --> \d
+    //Underscore '_' --> _
+    //Repeat one or more times --> +
+    //OR --> |
+
+  return res
+}
+```
