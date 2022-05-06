@@ -456,3 +456,13 @@ function getNumberFromString(s) {
   return Number(numbers); // --> retorna en número                                 
 }
 ```
+
+# Wednesday, May 5th
+## String Cleaning
+Your program will take in a string and clean out all numeric characters, and return a string with spacing and special characters ~#$%^&!@*():;"'.,? all intact.
+```javascript
+function stringClean(s){
+  ///\d/g --> regex for digits
+  return s.replace(/\d/g, '') //--> replace the digits on the text with ''
+}
+```
