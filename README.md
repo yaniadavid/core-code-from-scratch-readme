@@ -466,3 +466,21 @@ function stringClean(s){
   return s.replace(/\d/g, '') //--> replace the digits on the text with ''
 }
 ```
+
+## Valid Password
+You need to write regex that will validate a password to make sure <br>
+[Kata Link](http://https://www.codewars.com/kata/52e1476c8147a7547a000811/train/javascript "Kata Link")
+```javascript
+function validate(password) {
+  // least six characters long --> {6,}
+  // contains a lowercase letter --> [a-z]+
+  // contains an uppercase letter --> [A-Z]+
+  // contains a number --> [0-9]+
+  
+  return (/^[a-zA-Z0-9]{6,}$/.test(password) 
+        && /[a-z]+/.test(password)
+        && /[A-Z]+/.test(password)
+        && /[0-9]+/.test(password)
+         );
+}
+```
