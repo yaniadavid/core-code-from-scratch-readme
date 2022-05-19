@@ -457,7 +457,7 @@ function getNumberFromString(s) {
 }
 ```
 
-# Wednesday, May 5th
+# Thursday, May 5th
 ## String Cleaning
 Your program will take in a string and clean out all numeric characters, and return a string with spacing and special characters ~#$%^&!@*():;"'.,? all intact.
 ```javascript
