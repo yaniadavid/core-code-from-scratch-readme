@@ -205,3 +205,12 @@ function find(rats) {
   (previousValue, currentValue) => previousValue + Math.pow(2,currentValue), 0);
 }
 ```
+
+## [Array.diff](https://www.codewars.com/kata/523f5d21c841566fde000009/train/javascript "Array.diff")
+It should remove all values from list a, which are present in list b keeping their order. 🔍
+```javascript
+function arrayDiff(a, b) {
+  return result = a.filter((element) => !b.includes(element))
+}
+```
+
