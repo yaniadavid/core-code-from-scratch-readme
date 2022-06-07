@@ -2,6 +2,22 @@
 
 Lear about interfaces, data modifiers and function types, along with how to interact with the console using typescript
 
+# Monday, May 23rd
+## Input/Output
+[Example Project](https://github.com/yaniadavid/core-code-from-scratch-readme/tree/main/Week%207/inout)
+
+## OOP Glosary
+Abstraction
+Inheritance
+Polymorphism
+Encapsulation
+Class
+Object
+Instance
+Interface
+Access Modifiers
+Constructors
+
 # Wednesday, May 25th
 ## [Build Tower](https://www.codewars.com/kata/576757b1df89ecf5bd00073b/train/typescript "Build Tower")
 Build a pyramid-shaped tower given a positive integer number of floors. A tower block is represented with "*" character. 🗼
