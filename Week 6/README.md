@@ -89,10 +89,10 @@ export class G964 {
 Write a function that takes a string of braces, and determines if the order of the braces is valid. It should return true if the string is valid, and false if it's invalid.📎
 ```typescript
 export function validBraces(braces: string): boolean {
-  while(/\(\)|\[\]|\{\}/g.test(braces)){
-   braces = braces.replace(/\(\)|\[\]|\{\}/g, '')
+  while(/\(\)|\[\]|\{\}/g.test(braces)){ //expresión regular que verifica que los pares de braces.
+   braces = braces.replace(/\(\)|\[\]|\{\}/g, '') //reemplaza cada que se cumple, hasta dejar vacío el string
   }
-  return braces.length === 0
+  return braces.length === 0 
 }
 ```
 
@@ -103,15 +103,17 @@ function displayBoard(board, width){
   let n = 0;
   let text = '';
   let line = '';
-  for(let i = 0; i < board.length / width; i++){
-    for(let j = 0; j < width; j++){
-      if(j == width - 1){text += ' ' + board[n] + ' ';
-                        line += '---'}else{
-      text += ' ' + board[n] + ' |'
-      line += '----'}
+  for(let i = 0; i < board.length / width; i++){ //recorrerá el num. de líneas correspondientes al tablero
+    for(let j = 0; j < width; j++){ //para cada fila
+      if(j == width - 1){
+        text += ' ' + board[n] + ' ';
+        line += '---' //por cada caracter sumar un '-'
+      }else{
+        text += ' ' + board[n] + ' |'
+        line += '----'}
       n++;
     }
-    if(i !== (board.length / width) - 1){
+    if(i !== (board.length / width) - 1){ 
     text += '\n' + line + '\n';
     line = '';}
   }
@@ -124,6 +126,9 @@ function displayBoard(board, width){
 The goal of this exercise is to convert a string to a new string where each character in the new string is "(" if that character appears only once in the original string, or ")" if that character appears more than once in the original string. Ignore capitalization when determining if a character is a duplicate. ⚙
 ```javascript
 export function duplicateEncode(word: string){
+//debe ignorar las mayúsculas
+//separar el string en un arreglo
+//revisar para cada posición si existe ya otra posición que coincida, y reemplazar por ')', sino reemplazar por '('
    return word.toLowerCase().split('').map((l: string, i: number, w: string[]) => {
                                            if(w.indexOf(l) == w.lastIndexOf(l)){
                                                 return '(' 
@@ -134,3 +139,68 @@ export function duplicateEncode(word: string){
    ).join('');
 }
 ```
+
+## [Find the odd int](https://www.codewars.com/kata/54da5a58ea159efa38000836/train/typescript "Find the odd int")
+Given an array of integers, find the one that appears an odd number of times.
+```javascript
+export const findOdd = (xs: number[]): number => {
+        // XOR operator -> ^ 
+        //Eliminará todos los numeros con los que encuentre pareja, si sobra un número significa que es impar. 
+  return xs.reduce( (a,b)=> a^b);
+};
+```
+ 🔎 [Help](https://dev.to/bladesensei/xor-operator-in-programming-use-case-34ng "Help")
+
+## [Which are in?](https://www.codewars.com/kata/54da5a58ea159efa38000836/train/typescript "Which are in?")
+Given two arrays of strings a1 and a2 return a sorted array r in lexicographical order of the strings of a1 which are substrings of strings of a2.
+```javascript
+export class G964 {
+  public static inArray(a1: string[], a2: string[]): string[] {
+    let arr = a2.join(" ")
+    return a1.filter(item => arr.search(item) !== -1 && item !== undefined ).sort()
+  }
+}
+```
+
+## [Sums of Parts](https://www.codewars.com/kata/5ce399e0047a45001c853c2b/train/typescript "Sums of Parts")
+The function parts_sums (or its variants in other languages) will take as parameter a list ls and return a list of the sums of its parts as defined above.
+```javascript
+export function partsSums(ls: number[]): number[] {
+  let result: number[] = [];
+  //Realizar la suma de todos los valores del arreglo
+  const sum: number = ls.reduce(function (previousValue, currentValue) {
+  return previousValue + currentValue}, 0)
+  //Añadirlo al arreglo de resultados
+  result.push(sum);
+  //Obtener los siguientes valores restando cada número del arreglo original consecutivamente 
+  for(let i = 0; i < ls.length; i++){
+    result.push(result[i] - ls[i])
+  }
+  return result
+}
+```
+
+## [Consecutive strings](https://www.codewars.com/kata/56a5d994ac971f1ac500003e/train/typescript "Consecutive strings")
+You are given an array(list) strarr of strings and an integer k. Your task is to return the first longest string consisting of k consecutive strings taken in the array.
+```javascript
+export function longestConsec(strarr: string[], k: number): string {
+  if (strarr.length === 0 || k > strarr.length || k <= 0) return '';
+  
+  let theword: string = '';
+  let text: string = '';
+  
+  for (let i = 0; i < strarr.length; i++) {
+    //Unir con la siguiente palabra, mientras sea posible
+    if (i + k <= strarr.length) {
+      text = strarr.slice(i, i + k).join('');
+    }
+    //Reemplazar si se encuentra una nueva palabra de mayor longitud
+    if(theword.length < text.length){
+      theword = text;
+    }
+  }
+  return theword;
+}
+```
+
+
