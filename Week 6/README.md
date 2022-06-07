@@ -95,3 +95,26 @@ export function validBraces(braces: string): boolean {
   return braces.length === 0
 }
 ```
+
+## [Tic-Tac-Toe-like table Generator](https://www.codewars.com/kata/5b817c2a0ce070ace8002be0/train/javascript "Tic-Tac-Toe-like table Generator")
+TicTacToe 🕹
+```javascript
+function displayBoard(board, width){
+  let n = 0;
+  let text = '';
+  let line = '';
+  for(let i = 0; i < board.length / width; i++){
+    for(let j = 0; j < width; j++){
+      if(j == width - 1){text += ' ' + board[n] + ' ';
+                        line += '---'}else{
+      text += ' ' + board[n] + ' |'
+      line += '----'}
+      n++;
+    }
+    if(i !== (board.length / width) - 1){
+    text += '\n' + line + '\n';
+    line = '';}
+  }
+  return text
+}
+```
