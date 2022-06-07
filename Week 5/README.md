@@ -51,3 +51,57 @@ function revrot(str, sz) {
 
 # Tuesday, May 8th
 ## [TypeScript Object Type](http://https://typescript-exercises.github.io/#exercise=1 "TypeScript Object Type")
+Original:
+```typescript
+export type User = unknown;
+
+export const users: unknown[] = [
+    {
+        name: 'Max Mustermann',
+        age: 25,
+        occupation: 'Chimney sweep'
+    },
+    {
+        name: 'Kate Müller',
+        age: 23,
+        occupation: 'Astronaut'
+    }
+];
+
+export function logPerson(user: users) {
+    console.log(` - ${user.name}, ${user.age}`);
+}
+
+console.log('Users:');
+users.forEach(logPerson);
+```
+Solution: 
+```javascript
+export type User = { 
+    name: string;
+    age: number;
+    occupation: string;
+
+};
+
+export const users: User[] = [
+    {
+        name: 'Max Mustermann',
+        age: 25,
+        occupation: 'Chimney sweep'
+    },
+    {
+        name: 'Kate Müller',
+        age: 23,
+        occupation: 'Astronaut'
+    }
+];
+
+
+export function logPerson(user: User) {        
+    console.log(` - ${user.name}, ${user.age}`);
+}
+
+console.log('Users:');
+users.forEach(logPerson);
+```
