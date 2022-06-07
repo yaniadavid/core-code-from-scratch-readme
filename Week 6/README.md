@@ -204,7 +204,7 @@ export function longestConsec(strarr: string[], k: number): string {
 ```
 
 # Thursday, May 19th
-## [Tile]
+## Tile
 In the board game Scrabble2, each tile contains a letter, which is used to spell words, and a score, which is used to determine the value of words.
 
 1. Write a definition for a class named `Tile` that represents Scrabble tiles. The instance variables should be a `string` named `letter` and an `number` named `value`.
@@ -230,3 +230,19 @@ export class Main {
 }
 ```
 
+Solution
+```typescript
+export class Tile {
+    letter: string;
+    value: number;
+}
+
+constructor(letter:string, value:number){
+    this.letter = letter;
+    this.value = value;
+}
+
+printTile(){
+    console.log('-->\nLetter: ' + this.letter + '\nValue: ' + this.value)
+}
+```
