@@ -26,7 +26,7 @@ export function parse(data: string): number[] {
 }
 ```
 
-# Wednesday, June 2nd
+# Thursday, June 2nd
 ## Generics
 We have just learn about generics, an we where creating our own implementation for the Linkedlist structure, but it is incomplete, you task is to finish the missing methods.
 
