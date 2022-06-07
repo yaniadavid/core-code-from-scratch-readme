@@ -3,7 +3,7 @@
 Lear about interfaces, data modifiers and function types, along with how to interact with the console using typescript
 
 # Wednesday, May 25th
-## [Build Tower] (https://www.codewars.com/kata/576757b1df89ecf5bd00073b/train/typescript "Build Tower")
+## [Build Tower](https://www.codewars.com/kata/576757b1df89ecf5bd00073b/train/typescript "Build Tower")
 Build a pyramid-shaped tower given a positive integer number of floors. A tower block is represented with "*" character. 🗼
 ```typescript
 export const towerBuilder = (nFloors: number): string[] => {
@@ -19,7 +19,7 @@ export const towerBuilder = (nFloors: number): string[] => {
 }
 ```
 
-## [Meeting] (https://www.codewars.com/kata/59df2f8f08c6cec835000012/train/typescript "Meeting")
+## [Meeting](https://www.codewars.com/kata/59df2f8f08c6cec835000012/train/typescript "Meeting")
 Could you make a program that 📩 <br>
 makes this string uppercase <br>
 gives it sorted in alphabetical order by last name. <br>
