@@ -69,3 +69,29 @@ export function warnTheSheep(queue: string[]): string {
   }
 }
 ```
+
+## [Playing with digits](https://www.codewars.com/kata/5552101f47fc5178b1000050/train/typescript "Playing with digits")
+we want to find a positive integer k, if it exists, such that the sum of the digits of n taken to the successive powers of p is equal to k * n. 
+```typescript
+export class G964 {
+    public static digPow = (n: number, p: number) => {
+        const tot = n.toString()
+                      .split('')
+                      .map(Number)
+                      .reduce((prev: number, curr: number) => prev + Math.pow(curr, p++), 0);
+      if (tot % n === 0) return tot / n;
+      return -1;
+    }
+}
+```
+
+## [Valid Braces](https://www.codewars.com/kata/5277c8a221e209d3f6000b56/train/typescript "Valid Braces")
+Write a function that takes a string of braces, and determines if the order of the braces is valid. It should return true if the string is valid, and false if it's invalid.📎
+```typescript
+export function validBraces(braces: string): boolean {
+  while(/\(\)|\[\]|\{\}/g.test(braces)){
+   braces = braces.replace(/\(\)|\[\]|\{\}/g, '')
+  }
+  return braces.length === 0
+}
+```
