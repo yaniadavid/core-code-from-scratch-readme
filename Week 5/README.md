@@ -196,3 +196,12 @@ export function logPerson(user: Person) {
 
 persons.forEach(logPerson);
 ```
+# Thursday
+## [What's Your Poison?](https://www.codewars.com/kata/58c47a95e4eb57a5b9000094/train/javascript "What's Your Poison?")
+You receive an array of integers (0 to 9), each of them is the number of a rat which died after tasting the wine bottles. Return the number of the bottle (1..1000) which is poisoned. 🐀
+```javascript
+function find(rats) {
+    return rats.reduce(
+  (previousValue, currentValue) => previousValue + Math.pow(2,currentValue), 0);
+}
+```
