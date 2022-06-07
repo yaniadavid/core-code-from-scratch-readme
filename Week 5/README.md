@@ -76,7 +76,7 @@ console.log('Users:');
 users.forEach(logPerson);
 ```
 Solution: 
-```javascript
+```typescript
 export type User = { 
     name: string;
     age: number;
