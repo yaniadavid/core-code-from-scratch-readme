@@ -1,4 +1,4 @@
-# Week 5
+<h1 align="center">Week 5</h1>
 Lear about Typescript and Object Oriented Programming introduction
 
 # Monday, May 8th
