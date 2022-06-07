@@ -24,6 +24,7 @@ export class G964 {
 }
 ```
 ## [Mumbling](https://www.codewars.com/kata/563b662a59afc2b5120000c6/train/typescript "Mumbling")
+📖
 ```typescript
 export function accum(s: string): string {
   let text: string = ''
