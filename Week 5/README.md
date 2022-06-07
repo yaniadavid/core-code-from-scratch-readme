@@ -1,7 +1,7 @@
 <h1 align="center">Week 5</h1>
 Lear about Typescript and Object Oriented Programming introduction
 
-# Monday, May 8th
+# Monday, May 9th
 ## Find The Missing Letter 
 Write a method that takes an array of consecutive (increasing) letters as input and that returns the missing letter in the array. <br>
 You will always get an valid array. And it will be always exactly one letter be missing. The length of the array will always be at least 2.
@@ -49,7 +49,7 @@ function revrot(str, sz) {
 }
 ```
 
-# Tuesday, May 8th
+# Tuesday, May 10th
 ## [TypeScript Object Type](https://typescript-exercises.github.io/#exercise=1 "TypeScript Object Type")
 Original:
 ```typescript
@@ -196,7 +196,7 @@ export function logPerson(user: Person) {
 
 persons.forEach(logPerson);
 ```
-# Thursday
+# Thursday, May 12th
 ## [What's Your Poison?](https://www.codewars.com/kata/58c47a95e4eb57a5b9000094/train/javascript "What's Your Poison?")
 You receive an array of integers (0 to 9), each of them is the number of a rat which died after tasting the wine bottles. Return the number of the bottle (1..1000) which is poisoned. 🐀
 ```javascript
