@@ -48,3 +48,6 @@ function revrot(str, sz) {
   
 }
 ```
+
+# Tuesday, May 8th
+## [TypeScript Object Type](http://https://typescript-exercises.github.io/#exercise=1 "TypeScript Object Type")
